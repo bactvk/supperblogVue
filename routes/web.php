@@ -18,3 +18,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group([
+	'prefix' => 'post'
+],function(){
+	Route::get('/','PostController@list');
+});
+
+Route::get('/{anypath}','HomeController@index')->where('path','.*');

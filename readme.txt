@@ -8,3 +8,7 @@
 
 3.
 npm run watch
+
+// install
+1. 
+npm install vue-router
