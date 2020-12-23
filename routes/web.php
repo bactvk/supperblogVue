@@ -26,3 +26,6 @@ Route::group([
 });
 
 Route::get('/{anypath}','HomeController@index')->where('path','.*');
+
+// category
+Route::post('/category-add','CategoryController@add');
