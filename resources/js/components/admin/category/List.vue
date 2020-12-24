@@ -25,7 +25,7 @@
 				                <tbody>
 					                <tr>
 					                  <td>Trident</td>
-					                  <td>4</td>
+					                  <td>{{getAllCategory}}</td>
 					                  <td>
 					                  	<a class="btn btn-warning" href="">Edit</a>
 					                  	<a class="btn btn-danger" href="">Delete</a>
@@ -44,7 +44,19 @@
 
 <script type="text/javascript">
 	export default{
-		name: "List"
+		name: "List",
+		mounted(){
+			this.$store.dispatch("allCategory")
+		},	
+		computed:{
+			getAllCategory(){
+				return this.$store.getters.getCategory
+				// this.$store.dispatch("allCategory")
+			}
+		},
+		methods:{
+
+		}
 	}
 </script>
 

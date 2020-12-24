@@ -29,3 +29,4 @@ Route::get('/{anypath}','HomeController@index')->where('path','.*');
 
 // category
 Route::post('/category-add','CategoryController@add');
+Route::get('/category','CategoryController@list');
